@@ -1,5 +1,6 @@
 # BambangShop Publisher App
 Tutorial and Example for Advanced Programming 2024 - Faculty of Computer Science, Universitas Indonesia
+Haliza N. S. Arfa | 2306211401 | Adpro A
 
 ---
 
@@ -58,12 +59,12 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement delete function in Subscriber repository.`
     -   [x] Write answers of your learning module's "Reflection Publisher-1" questions in this README.
 -   **STAGE 2: Implement services and controllers**
-    -   [ ] Commit: `Create Notification service struct skeleton.`
-    -   [ ] Commit: `Implement subscribe function in Notification service.`
-    -   [ ] Commit: `Implement subscribe function in Notification controller.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification service.`
-    -   [ ] Commit: `Implement unsubscribe function in Notification controller.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
+    -   [x] Commit: `Create Notification service struct skeleton.`
+    -   [x] Commit: `Implement subscribe function in Notification service.`
+    -   [x] Commit: `Implement subscribe function in Notification controller.`
+    -   [x] Commit: `Implement unsubscribe function in Notification service.`
+    -   [x] Commit: `Implement unsubscribe function in Notification controller.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
     -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
     -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
@@ -92,5 +93,16 @@ Karena aplikasi BambangShop menggunakan multithreading, maka `DashMap` perlu dig
 Jika menggunakan Singleton pattern, objek hanya memiliki satu instance selama program berjalan. Dengan begitu, ketika dijalankan dalam multithreading, objek harus dilakukan locking. Namun, program akan menjadi lebih kompleks.
 
 #### Reflection Publisher-2
+> In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+
+Separasi perlu dilakukan agar mudah dilakukan maintanability dan memenuhi modularity-scalability dengan prinsip Single Responsibility, di mana suatu class harus memiliki satu kepentingan saja. Dengan memisahkan Service dan Repository dari Model, business logic dengan data access terpisah sehnigga lebih mudah untuk dilakukan test dan debug.
+
+> What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+
+Kode akan menjadi lebih kompleks dan sulit di-maintain. Coupling antara dua clas sakan menjadi lebih tinggi, sehingga jika dilakukan suatu perubahan maka dampaknya akan banyak perubahan lainnya jika dibandingkan dengan dilakukan pemisahan business logic dan data access.
+
+> Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+ 
+Ya, dengan Postman, dapat dilakukan API testing. Saya dapat melihat hasil dari request yang saya kirimkan dan memastikan bahwa response yang saya terima sudah sesuai dengan yang diharapkan. Salah satu fitur pendukungnya yaitu Collection bisa mengelompokkan request berdasarkan folder dan Environment, memungkinkan saya untuk menyimpan variabel yang sering digunakan.
 
 #### Reflection Publisher-3
